@@ -17,7 +17,7 @@
     },
     "description": "Very simple OAuth 2.0 client",
     "license": "MIT",
-    "name": "fkooman/oauth2-client",
+    "name": "onpayio/oauth2-client",
     "require": {
         "ext-curl": "*",
         "ext-date": "*",

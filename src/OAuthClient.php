@@ -234,10 +234,12 @@ class OAuthClient
             'grant_type' => 'authorization_code',
             'code' => $responseCode,
             'redirect_uri' => $sessionData['redirect_uri'],
-            // 'code_verifier' => $sessionData['code_verifier'],
         ];
 
-        // fail-safe error handling
+        /* 
+        ** code_verifier does not exist in some occasions.
+        ** This block fixes that issue.
+        */
         if ( isset($sessionData['code_verifier']) ) {
             $tokenRequestData['code_verifier'] = $sessionData['code_verifier'];
         }

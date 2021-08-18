@@ -41,6 +41,6 @@ class ErrorLogger extends AbstractLogger
      */
     public function log($level, $message, array $context = [])
     {
-        \error_log($message);
+        // No need to log anything
     }
 }

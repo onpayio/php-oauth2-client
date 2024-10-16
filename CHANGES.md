@@ -1,5 +1,8 @@
 # Changes
 
+## Unreleased
+- Removed dependency on Psr/log entirely
+
 ## 7.2.0 (2020-04-25)
 - always use PKCE
 - use 256 bits random data for "state"

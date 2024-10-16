@@ -25,7 +25,6 @@
 $baseDir = \dirname(__DIR__);
 require_once \dirname(__DIR__).'/vendor/autoload.php';
 
-use fkooman\OAuth\Client\ErrorLogger;
 use fkooman\OAuth\Client\Exception\AuthorizeException;
 use fkooman\OAuth\Client\Exception\TokenException;
 use fkooman\OAuth\Client\Http\CurlHttpClient;
@@ -53,7 +52,7 @@ try {
         new SessionTokenStorage(),
         // for DEMO purposes we also allow connecting to HTTP URLs, do **NOT**
         // do this in production
-        new CurlHttpClient(['allowHttp' => true], new ErrorLogger())
+        new CurlHttpClient(['allowHttp' => true])
     );
 
     // handle the callback from the OAuth server
